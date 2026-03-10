@@ -1,0 +1,18 @@
+{
+    "todos": [
+        {
+            "id": 1,
+            "description": "T2ede344",
+            "status": "done",
+            "createdAt": "2026-03-10 10:40:55",
+            "updatedAt": "2026-03-10 10:44:26"
+        },
+        {
+            "id": 2,
+            "description": "T2ede34333",
+            "status": "todo",
+            "createdAt": "2026-03-10 10:41:07",
+            "updatedAt": "2026-03-10 10:41:07"
+        }
+    ]
+}
