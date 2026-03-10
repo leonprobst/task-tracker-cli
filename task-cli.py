@@ -76,10 +76,13 @@ def mark(id, marktask):
         json.dump(loaded, json_file, indent=4)
         return
 
-def list():
-    return
-
-def list(status):
+def list(status=None):
+    for i in loaded.get("todos"):
+        if status is None:
+            print(i)
+        elif status == "todo" or status == "in progress" or status == "done":
+            if i.get("status") == status:
+                print(i)
     return
 
 
@@ -96,7 +99,5 @@ if __name__ == "__main__":
     elif operation == "mark-done":
         mark(sys.argv[2], "done")
     elif operation == "list":
-        if(sys.argv[2] != ""):
-            list(sys.argv[2])
-        else: list()
+        list(sys.argv[2])
     else: print("Unknown Operation!")
