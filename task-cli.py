@@ -18,6 +18,7 @@ def add(task):
         loaded.get("todos").append(data)
         with open("tasks.json", "w") as json_file:
             json.dump(loaded, json_file, indent=4)
+        print(f"Task added successfully (ID: {data["id"]})")
         return
     except:
         pass
@@ -25,6 +26,8 @@ def add(task):
     #Creates new json if it doesn't exist
     with open("tasks.json", "w") as json_file:
         json.dump({"todos": [data]}, json_file, indent=4)
+        print(f"Task added successfully (ID: {data["id"]})")
+        return
 
 def update(id, task):
     global date
